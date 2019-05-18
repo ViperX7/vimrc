@@ -51,6 +51,7 @@ Plug 'tomtom/tcomment_vim'
 
 Plug 'terryma/vim-multiple-cursors'
 
+Plug 'jiangmiao/auto-pairs'
 
                                                                                 "Plug 'tpope/vim-surround'
 
