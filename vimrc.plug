@@ -57,9 +57,9 @@ Plug 'blueyed/vim-qf_resize'                    " ALE Helper plugin auto resizze
 if has('nvim')                                  " Autocomplete
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+"  Plug 'Shougo/deoplete.nvim'
+"  Plug 'roxma/nvim-yarp'
+"  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
 
@@ -84,6 +84,12 @@ let g:deoplete#enable_at_startup = 1
 
 
 "Plug 'easymotion/vim-easymotion'
+
+
+" Python autocompletion, go to definition.
+Plug 'davidhalter/jedi-vim'
+" Better autocompletion
+Plug 'Shougo/neocomplcache.vim'
 
 "
 

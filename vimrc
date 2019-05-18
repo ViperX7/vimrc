@@ -269,6 +269,8 @@ set lazyredraw          " redraw only when we need to.
     source ~/.vim/ext/vim-commentry.vim
 " Semantic-highlight
     source ~/.vim/ext/semantic-highlight.vim
+" Neocompletion Cache
+    source ~/.vim/ext/neocomplcache.vim
 
 
 
