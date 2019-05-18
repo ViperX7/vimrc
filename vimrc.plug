@@ -3,70 +3,86 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 "---------File Mannagement----------
-Plug 'francoiscabrol/ranger.vim'
-Plug 'tpope/vim-eunuch'
-Plug 'junegunn/fzf'
+
+Plug 'francoiscabrol/ranger.vim'                " Ranger Integration
+
+Plug 'tpope/vim-eunuch'                         " File operation commands
+
+Plug 'junegunn/fzf'                             " Fuzzy File finder
 Plug 'junegunn/fzf.vim'
 
-Plug 'scrooloose/nerdtree'
-                                                                                "Plug 'Xuyuanp/nerdtree-git-plugin'                                                                 " Git integretion for nerd tree
+Plug 'scrooloose/nerdtree'                      " File manager within vim
+Plug 'Xuyuanp/nerdtree-git-plugin'              " Git integretion for nerd tree
+Plug 'ryanoasis/vim-devicons'                   " Icons and highlighting for NERDTree
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Highlighting for NERDTree
 
 
-                                                                                "Plug 'Shougo/vimfiler.vim'                                                                                "File mannager
-                                                                                "Plug 'Shougo/unite.vim'
-
-
-
-
-"---------Editor Enhansement----
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-Plug 'Yggdroot/indentLine'
-Plug 'easymotion/vim-easymotion'
-
-
-                                                                                "Plug 'python-mode/python-mode', { 'branch': 'develop' }                                                " Autocomplete
-                                                                                "if has('nvim')
-                                                                                "  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-                                                                                "else
-                                                                                "  Plug 'Shougo/deoplete.nvim'
-                                                                                "  Plug 'roxma/nvim-yarp'
-                                                                                "  Plug 'roxma/vim-hug-neovim-rpc'
-                                                                                "endif
-                                                                                "let g:deoplete#enable_at_startup = 1
+	"Rejected
+            "Plug 'Shougo/vimfiler.vim'         " File mannager
+            "Plug 'Shougo/unite.vim'
 
 
 
-                                                                                "Plug 'tpope/vim-fugitive'                                                                                " Git wrapper
 
-"----------File Editing--------
+"------------Editor Enhansement------------
 
-" Plug 'scrooloose/nerdcommenter'
-"Plug 'tpope/vim-commentary'
-Plug 'tomtom/tcomment_vim'
+Plug 'vim-airline/vim-airline'                  " Status airline
+Plug 'vim-airline/vim-airline-themes'           " Airline themes
 
-Plug 'terryma/vim-multiple-cursors'
 
-Plug 'jiangmiao/auto-pairs'
+Plug 'Yggdroot/indentLine'                      " Indentation indicator
 
-                                                                                "Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'             " Multiple Cursors
+  
+Plug 'jiangmiao/auto-pairs'                     " Automatic pairing for containers
 
+
+" Comments
+Plug 'tomtom/tcomment_vim'                      " Commenting plugin 
+
+        "Rejected
+            "Plug 'scrooloose/nerdcommenter'    " Commenting plugins
+            "Plug 'tpope/vim-commentary'        " Commenting plugins
 
 
 
 "----------Code Completion and checking------
-Plug 'w0rp/ale'
-Plug 'blueyed/vim-qf_resize'
 
-                                                                                "Plug 'airblade/vim-gitgutter'
-                                                                                "Plug 'editorconfig/editorconfig-vim'
-                                                                                "Plug 'itchyny/lightline.vim'
-                                                                                "Plug 'mattn/emmet-vim'
 
+Plug 'w0rp/ale'                                 " Async code linter and fixer
+Plug 'blueyed/vim-qf_resize'                    " ALE Helper plugin auto resizzes ale window
+
+
+if has('nvim')                                  " Autocomplete
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
+
+
+" Plug 'tpope/vim-surround'
+
+
+
+" Langusge specific
+"Plug 'python-mode/python-mode', { 'branch': 'develop' }
+
+
+
+" Git
+" Plug 'tpope/vim-fugitive' Git wrapper
+"Plug 'airblade/vim-gitgutter'
+
+"Plug 'editorconfig/editorconfig-vim'
+"Plug 'itchyny/lightline.vim'
+"Plug 'mattn/emmet-vim'
+
+
+"Plug 'easymotion/vim-easymotion'
 
 "
 
