@@ -267,7 +267,8 @@ set lazyredraw          " redraw only when we need to.
     source ~/.vim/ext/indentLine.vim
 " vim-commentry
     source ~/.vim/ext/vim-commentry.vim
-
+" Semantic-highlight
+    source ~/.vim/ext/semantic-highlight.vim
 
 
 
