@@ -8,8 +8,12 @@ Plug 'francoiscabrol/ranger.vim'                " Ranger Integration
 
 Plug 'tpope/vim-eunuch'                         " File operation commands
 
+
 Plug 'junegunn/fzf'                             " Fuzzy File finder
 Plug 'junegunn/fzf.vim'
+
+Plug 'Shougo/denite.nvim'                       " Another Fuzzy finder
+
 
 Plug 'scrooloose/nerdtree'                      " File manager within vim
 Plug 'Xuyuanp/nerdtree-git-plugin'              " Git integretion for nerd tree
@@ -29,12 +33,19 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Highlighting for NERDTree
 Plug 'vim-airline/vim-airline'                  " Status airline
 Plug 'vim-airline/vim-airline-themes'           " Airline themes
 
+" Git
+    Plug 'tpope/vim-fugitive'                       " Git commands from vim
+    Plug 'Plug 'mhinz/vim-signify'                  " shows diff with git
+        "Rejected based on reviews and speed for better alternative
+            Plug 'airblade/vim-gitgutter'                   " Shows diff with git
+
 
 Plug 'Yggdroot/indentLine'                      " Indentation indicator
 
 Plug 'terryma/vim-multiple-cursors'             " Multiple Cursors
 
 Plug 'jiangmiao/auto-pairs'                     " Automatic pairing for containers
+Plug 'tpope/vim-surround'                       " A surround helper
 
 Plug 'jaxbot/semantic-highlight.vim'            " Better Highlighting
 
@@ -47,21 +58,48 @@ Plug 'tomtom/tcomment_vim'                      " Commenting plugin
 
 
 
+
+Plug 'easymotion/vim-easymotion'
+
+
+
 "----------Code Completion and checking------
 
 
 Plug 'w0rp/ale'                                 " Async code linter and fixer
-Plug 'blueyed/vim-qf_resize'                    " Plugin auto resizes ale window
+Plug 'blueyed/vim-qf_resize'                    " Auto resizes ale window
+
+
+
+if has('nvim')                                  " Autocomplete
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+ Plug 'Shougo/deoplete.nvim'
+ Plug 'roxma/nvim-yarp'
+ Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
+
+"    -------------------**************Language specific**********--------------------
+
+        Plug 'deoplete-plugins/deoplete-jedi'        " Python
+        Plug 'Shougo/neco-vim', { 'for': 'vim' }     " Vim sources for deoplete
+        Plug 'Shougo/deoplete-clangx'                   " for C
+        Plug 'deoplete-plugins/deoplete-asm'         " for assembly
+        Plug 'deoplete-plugins/deoplete-go'
+        Plug 'jjohnson338/deoplete-mssql'
+        Plug 'Shougo/neosnippet.vim'
+        Plug 'Shougo/neosnippet-snippets'
+        Plug 'fszymanski/deoplete-emoji'
 
 
 
 
 
 
-
-
-
-
+"*******************************Themes**********************
+Plug 'morhetz/gruvbox'
 
 
 
@@ -69,45 +107,33 @@ Plug 'blueyed/vim-qf_resize'                    " Plugin auto resizes ale window
 
 "-------------------------------------Experimental---------------------------
 
-if has('nvim')                                  " Autocomplete
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-"  Plug 'Shougo/deoplete.nvim'
- Plug 'roxma/nvim-yarp'
- Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+
+
+" miyakogi/seiya.vim                                 " transparent vim
+" edkolev/promptline.vim                             " shell plugin
+" brooth/far.vim                                     " Find and replace plugin
 
 
 
-" Plug 'tpope/vim-surround'
+
+"Plug 'haya14busa/incsearch.vim'
 
 
 
-" Langusge specific
-"Plug 'python-mode/python-mode', { 'branch': 'develop' }
-
-
-
-" Git
-" Plug 'tpope/vim-fugitive' Git wrapper
-"Plug 'airblade/vim-gitgutter'
 
 "Plug 'editorconfig/editorconfig-vim'
-"Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim' 	
 "Plug 'mattn/emmet-vim'
+"Plug  'ludovicchabant/vim-gutentags'
 
 
-"Plug 'easymotion/vim-easymotion'
 
 
 " Python autocompletion, go to definition.
 Plug 'davidhalter/jedi-vim'
 " Better autocompletion
- Plug 'Shougo/neocomplcache.vim'
+"  Plug 'Shougo/neocomplcache.vim'
 
-Plug 'Shougo/denite.nvim'
-"
 
 " Initialize plugin system
 call plug#end()

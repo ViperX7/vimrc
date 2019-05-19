@@ -3,6 +3,7 @@
 
 filetype on
 set nocompatible	            " Require for Vim coolness
+set encoding=utf-8
 
 "--------------------------------Performance-----------------------------------
 
@@ -12,7 +13,7 @@ set lazyredraw          " redraw only when we need to.
     set hidden
     set history=1000         " remember more commands and search history
     set undolevels=1000      " use many muchos levels of undo
- 
+
 "------------------------------------------------------------------------------
 
 
@@ -81,23 +82,23 @@ set lazyredraw          " redraw only when we need to.
     map <C-l> <C-w>l
 
 
-" Visual mode Text Selection    
+" Visual mode Text Selection
     " Vmap for maintain Visual Mode after shifting > and <
         vmap < <gv
         vmap > >gv
-    
+
         vmap <left> <gv
         vmap <right> >gv
 
     " Move visual block
         vnoremap Jv :m '>+1<CR>gv=gv
         vnoremap K :m '<-2<CR>gv=gv
-        
+
         vnoremap <down> :m '>+1<CR>gv=gv
         vnoremap <up> :m '<-2<CR>gv=gv
 
 
-    
+
 " Dissable Arrow keys
     nnoremap <Left> :echoe "Use h"<CR>
     nnoremap <Right> :echoe "Use l"<CR>
@@ -126,7 +127,7 @@ set lazyredraw          " redraw only when we need to.
 
 " Line Numbering
     set number
-    
+
 
 " Highlight current line
     set cursorline
@@ -173,7 +174,7 @@ set lazyredraw          " redraw only when we need to.
 
 
 
-" Indentation 
+" Indentation
     filetype indent on  " load filetype-specific indent files
     set nowrap
     set smartindent
@@ -270,7 +271,13 @@ set lazyredraw          " redraw only when we need to.
 " Semantic-highlight
     source ~/.vim/ext/semantic-highlight.vim
 " Neocompletion Cache
-    source ~/.vim/ext/neocomplcache.vim
+    " source ~/.vim/ext/neocomplcache.vim
 " Denite
     source ~/.vim/ext/denite.vim
+" Airline
+    source ~/.vim/ext/airline.vim
+" Deoplete
+    source ~/.vim/ext/deoplete.vim
 
+" Neosnippet
+    source ~/.vim/ext/neosnippet.vim

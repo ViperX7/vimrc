@@ -41,8 +41,7 @@
 
 
     " Do not display some useless files in the tree:
-
-        let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
+        let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '\.git$[[dir]]', '\.idea$[[dir]]', '\.sass-cache$']
 
 setlocal conceallevel=3
 autocmd syntax match NERDTreeDirSlash #/$# containedin=NERDTreeDir conceal contained
