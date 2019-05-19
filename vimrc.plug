@@ -35,7 +35,7 @@ Plug 'vim-airline/vim-airline-themes'           " Airline themes
 
 " Git
     Plug 'tpope/vim-fugitive'                       " Git commands from vim
-    Plug 'Plug 'mhinz/vim-signify'                  " shows diff with git
+    Plug 'mhinz/vim-signify'                        " shows diff with git
         "Rejected based on reviews and speed for better alternative
             Plug 'airblade/vim-gitgutter'                   " Shows diff with git
 
