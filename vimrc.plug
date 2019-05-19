@@ -33,13 +33,13 @@ Plug 'vim-airline/vim-airline-themes'           " Airline themes
 Plug 'Yggdroot/indentLine'                      " Indentation indicator
 
 Plug 'terryma/vim-multiple-cursors'             " Multiple Cursors
-  
+
 Plug 'jiangmiao/auto-pairs'                     " Automatic pairing for containers
 
 Plug 'jaxbot/semantic-highlight.vim'            " Better Highlighting
 
 " Comments
-Plug 'tomtom/tcomment_vim'                      " Commenting plugin 
+Plug 'tomtom/tcomment_vim'                      " Commenting plugin
 
         "Rejected
             "Plug 'scrooloose/nerdcommenter'    " Commenting plugins
@@ -51,15 +51,30 @@ Plug 'tomtom/tcomment_vim'                      " Commenting plugin
 
 
 Plug 'w0rp/ale'                                 " Async code linter and fixer
-Plug 'blueyed/vim-qf_resize'                    " ALE Helper plugin auto resizzes ale window
+Plug 'blueyed/vim-qf_resize'                    " Plugin auto resizes ale window
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"-------------------------------------Experimental---------------------------
 
 if has('nvim')                                  " Autocomplete
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
 "  Plug 'Shougo/deoplete.nvim'
-"  Plug 'roxma/nvim-yarp'
-"  Plug 'roxma/vim-hug-neovim-rpc'
+ Plug 'roxma/nvim-yarp'
+ Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
 
@@ -89,12 +104,10 @@ let g:deoplete#enable_at_startup = 1
 " Python autocompletion, go to definition.
 Plug 'davidhalter/jedi-vim'
 " Better autocompletion
-Plug 'Shougo/neocomplcache.vim'
+ Plug 'Shougo/neocomplcache.vim'
 
+Plug 'Shougo/denite.nvim'
 "
 
 " Initialize plugin system
 call plug#end()
-
-
-
