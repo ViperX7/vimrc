@@ -24,9 +24,14 @@
 
 
 
+"*************************************Deoplete Keymapings*********************************************
+"__________________________________________________________________________________________________________
+"| Dont edit keymappings here edit from ~/.vim/configs/keybindings.vim below values are for refference only|
+"|_________________________________________________________________________________________________________|
+
 " Atocomplete using tab
-    inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-    inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<tab>"
+    "inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+    "inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<tab>"
 
-
+"********************************************************************************************************
 

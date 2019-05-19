@@ -23,7 +23,11 @@
     " Enable NERDCommenterToggle to check all selected lines is commented or not 
         let g:NERDToggleCheckAllLines = 1
 
-    " The Following are already enabled default bindings***************
+"**********************************NerdCommenter Default key bindings********************
+"__________________________________________________________________________________________________________
+"| Dont edit keymappings here edit from ~/.vim/configs/keybindings.vim below values are for refference only|
+"|_________________________________________________________________________________________________________|
+
 
     " Comment out the current line or text selected in visual mode.
         "[count]<leader>cc |NERDComComment|
@@ -52,5 +56,7 @@
         "[count]<leader>cb |NERDComAlignedComment|
     " Uncomments the selected line(s).
         "[count]<leader>cu |NERDComUncommentLine|
+
+"**********************************************************************************************
 
 

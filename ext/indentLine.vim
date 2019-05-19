@@ -42,6 +42,13 @@
     "let g:indentLine_setConceal = 0
 
 
-"*****************************Key binding**************************
 
+"*****************************indentline binding**************************
+"__________________________________________________________________________________________________________
+"| Dont edit keymappings here edit from ~/.vim/configs/keybindings.vim below values are for refference only|
+"|_________________________________________________________________________________________________________|
+
+"Enable dissable indent lines
     noremap <leader>i :IndentLinesToggle<cr>
+"*******************************************************************
+

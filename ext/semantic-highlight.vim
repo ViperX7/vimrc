@@ -14,6 +14,14 @@ autocmd FileType ruby SemanticHighlight
 autocmd FileType rust SemanticHighlight
 autocmd FileType typescript SemanticHighlight
 
-"Key binding for toggling
-    nnoremap <Leader>s :SemanticHighlightToggle<cr>
 
+"***********************symentic-highlight Keybindings****************************
+"__________________________________________________________________________________________________________
+"| Dont edit keymappings here edit from ~/.vim/configs/keybindings.vim below values are for refference only|
+"|_________________________________________________________________________________________________________|
+
+
+"Key binding for toggling
+    "nnoremap <Leader>s :SemanticHighlightToggle<cr>
+
+"**************************************************************************************

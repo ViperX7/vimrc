@@ -15,6 +15,15 @@
     "highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
     "highlight link multiple_cursors_visual 
 
+
+
+
+" *************************************vim-multiple-cursors keybindings******************
+"__________________________________________________________________________________________________________
+"| Dont edit keymappings here edit from ~/.vim/configs/keybindings.vim below values are for refference only|
+"|_________________________________________________________________________________________________________|
+
 " Select n keywords with several keystrokes
-    nnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
-    vnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
+    "nnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
+    "vnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
+"************************************************************************************

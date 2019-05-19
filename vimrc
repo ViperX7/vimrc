@@ -4,117 +4,12 @@
 filetype on
 set nocompatible	            " Require for Vim coolness
 set encoding=utf-8
-
-"--------------------------------Performance-----------------------------------
-
 set lazyredraw          " redraw only when we need to.
 
 " History and Memory
     set hidden
     set history=1000         " remember more commands and search history
     set undolevels=1000      " use many muchos levels of undo
-
-"------------------------------------------------------------------------------
-
-
-" Call the .vimrc.plug file
- if filereadable(expand("~/.vim/vimrc.plug"))
-     source ~/.vim/vimrc.plug
- endif
-
-" ***************************************************************************
-
-
-"-------------------------------Key Mappings-----------------------------------
-
-" Leader Key
-"
-    let mapleader=","       " leader is comma
-
-" Movement
-    " move vertically by visual line
-        nnoremap j gj
-        nnoremap k gk
-    " move to beginning/end of line
-        nnoremap B ^
-        nnoremap E $
-        " $/^ doesn't do anything
-            nnoremap $ <nop>
-            nnoremap ^ <nop>
-
-
-" session management
-    nnoremap <leader>so :OpenSession<Space>
-    nnoremap <leader>ss :SaveSession<Space>
-    nnoremap <leader>sd :DeleteSession<CR>
-    nnoremap <leader>sc :CloseSession<CR>
-
-
-"" Tabs
-    nnoremap <Tab> gt
-    nnoremap <S-Tab> gT
-    nnoremap <silent> <S-t> :tabnew<CR>
-
-
-" Command key optimisation : = ;
-    nnoremap ; :
-
-
-" Set working directory
-    nnoremap <leader>. :lcd %:p:h<CR>
-
-    " Opens an edit command with the path of the currently edited file filled in
-        noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-    " Opens a tab edit command with the path of the currently edited file filled
-        noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-
-"" Split
-    noremap <Leader>h :<C-u>split<CR>
-    noremap <Leader>v :<C-u>vsplit<CR>
-
-
-" Easy window navigation
-    map <C-h> <C-w>h
-    map <C-j> <C-w>j
-    map <C-k> <C-w>k
-    map <C-l> <C-w>l
-
-
-" Visual mode Text Selection
-    " Vmap for maintain Visual Mode after shifting > and <
-        vmap < <gv
-        vmap > >gv
-
-        vmap <left> <gv
-        vmap <right> >gv
-
-    " Move visual block
-        vnoremap Jv :m '>+1<CR>gv=gv
-        vnoremap K :m '<-2<CR>gv=gv
-
-        vnoremap <down> :m '>+1<CR>gv=gv
-        vnoremap <up> :m '<-2<CR>gv=gv
-
-
-
-" Dissable Arrow keys
-    nnoremap <Left> :echoe "Use h"<CR>
-    nnoremap <Right> :echoe "Use l"<CR>
-    nnoremap <Up> :echoe "Use k"<CR>
-    nnoremap <Down> :echoe "Use j"<CR>
-
-"-------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
 
 
 
@@ -180,6 +75,7 @@ set lazyredraw          " redraw only when we need to.
     set smartindent
     set autoindent
     set copyindent    " copy the previous indentation on autoindenting
+
     " Spaces and Tabs
         set tabstop=4       " number of visual spaces per TAB fixed tab length
         set softtabstop=4   " number of spaces in tab when editing
@@ -193,8 +89,6 @@ set lazyredraw          " redraw only when we need to.
     set smartcase   " ignore case  search pattern is all lowercase, case-sensitive otherwise
     set hlsearch    " Highlight all matches
 "    set ignorecase    " ignore case when searching
-    " Turn off search highlightset ignorecase    " ignore case when searching
-        nnoremap  <leader><space> :nohlsearch<CR>
 
 
 
@@ -204,23 +98,7 @@ set lazyredraw          " redraw only when we need to.
     set foldnestmax=10      " 10 nested fold max
     " fold based on indent level
         set foldmethod=indent    "accepted: marker, manual, expr, syntax, diff, indent
-    " space open/closes folds
-        nnoremap <space> za
 
-" Copy/Paste/Cut
-    if has('unnamedplus')
-      set clipboard=unnamed,unnamedplus
-    endif
-
-    noremap YY "+y<CR>
-    noremap <leader>p "+gP<CR>
-    noremap XX "+x<CR>
-
-    if has('macunix')
-      " pbcopy for OSX copy/paste
-      vmap <C-x> :!pbcopy<CR>
-      vmap <C-c> :w !pbcopy<CR><CR>
-    endif
 
 
 " Visual autocomplete for command menu
@@ -238,46 +116,11 @@ set lazyredraw          " redraw only when we need to.
     set complete+=kspell
 
 
-" **********************************************************************************************
+" **************************************************************************
 
 
-
-
-
-
-
-"***********************************************************************************************
-
-
-" FZF
-    source ~/.vim/ext/fzf.vim
-" NERDTree
-    source ~/.vim/ext/NERDTree.vim
-" NERDCommenter
-    " source ~/.vim/ext/NERDCommenter.vim
-"NERDTreeGit
-    source ~/.vim/ext/NERDTree_Git.vim
-" Ranger
-    source ~/.vim/ext/ranger.vim
-" Multiple Cursors
-    source ~/.vim/ext/vim_multiple_cursors.vim
-" ALE
-    source ~/.vim/ext/ALE.vim
-    source ~/.vim/ext/vim-qf_resize.vim
-" IndentLine
-    source ~/.vim/ext/indentLine.vim
-" vim-commentry
-    source ~/.vim/ext/vim-commentry.vim
-" Semantic-highlight
-    source ~/.vim/ext/semantic-highlight.vim
-" Neocompletion Cache
-    " source ~/.vim/ext/neocomplcache.vim
-" Denite
-    source ~/.vim/ext/denite.vim
-" Airline
-    source ~/.vim/ext/airline.vim
-" Deoplete
-    source ~/.vim/ext/deoplete.vim
-
-" Neosnippet
-    source ~/.vim/ext/neosnippet.vim
+" Imports 
+    " Plugins
+        source ~/.vim/configs/plugins.vim
+    " Key bindings
+        source ~/.vim/configs/keybindings.vim

@@ -112,28 +112,37 @@
 "***********************************************************************************************
 
 
-"*************************************Keymapings*********************************************
-
-" Map keys to navigate between lines with errors and warnings.
-    nnoremap <leader>an :ALENextWrap<cr>
-    nnoremap <leader>ap :ALEPreviousWrap<cr>
-    nmap <silent> <leader>aj :ALENext<cr>
-    nmap <silent> <leader>ak :ALEPrevious<cr>
-    
-" Enable dissable ALE quickly
-    nmap <silent> <leader>aa :ALEToggle<cr>
-    nmap <silent> <leader>af :ALEFix<cr>
-    nmap <silent> <leader>al :ALELint<cr>:echo "Lint"<cr>
-    
-"***********************************************************************************************
-
-
 
 
 augroup CloseLoclistWindowGroup
     autocmd!
     autocmd QuitPre * if empty(&buftype) | lclose | endif
   augroup END
+
+
+
+
+
+"*************************************Keymapings*********************************************
+"__________________________________________________________________________________________________________
+"| Dont edit keymappings here edit from ~/.vim/configs/keybindings.vim below values are for refference only|
+"|_________________________________________________________________________________________________________|
+
+" Map keys to navigate between lines with errors and warnings.
+"    nnoremap <leader>an :ALENextWrap<cr>
+"    nnoremap <leader>ap :ALEPreviousWrap<cr>
+"    nmap <silent> <leader>aj :ALENext<cr>
+"    nmap <silent> <leader>ak :ALEPrevious<cr>
+    
+" Enable dissable ALE quickly
+"    nmap <silent> <leader>aa :ALEToggle<cr>
+"    nmap <silent> <leader>af :ALEFix<cr>
+"    nmap <silent> <leader>al :ALELint<cr>:echo "Lint"<cr>
+    
+"***********************************************************************************************
+
+
+
 
 
 
