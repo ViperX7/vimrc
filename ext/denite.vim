@@ -54,11 +54,10 @@ function! s:profile(opts) abort
     for l:dopt in keys(a:opts[l:fname])
       call denite#custom#option(l:fname, l:dopt, a:opts[l:fname][l:dopt])
     endfor
-  endfor
+  endfor 
 endfunction
 
 call s:profile(s:denite_options)
-
 
 
 
