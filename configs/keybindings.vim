@@ -31,7 +31,7 @@
 
 
 " Command key optimisation : = ;
-    nnoremap ; :
+    " nnoremap ; :
 
 
 " Set working directory
@@ -113,72 +113,69 @@
 
 
 
-"*************************************ALE Keymapings*********************************************
+"************************************ALE Keymapings****************************
 
 " Map keys to navigate between lines with errors and warnings.
     nnoremap <leader>an :ALENextWrap<cr>
     nnoremap <leader>ap :ALEPreviousWrap<cr>
     nmap <silent> <leader>aj :ALENext<cr>
     nmap <silent> <leader>ak :ALEPrevious<cr>
-    
+
 " Enable dissable ALE quickly
     nmap <silent> <leader>aa :ALEToggle<cr>
     nmap <silent> <leader>af :ALEFix<cr>
     nmap <silent> <leader>al :ALELint<cr>:echo "Lint"<cr>
-    
-"***********************************************************************************************
+
+"*******************************************************************************
 
 
 
 
 
-"*************************************Denite Keymapings*********************************************
+"*************************************Denite Keymapings*************************
 " === Denite shorcuts === "
 "   ;         - Browser currently open buffers
-"   <leader>t - Browse list of files in current directory
-"   <leader>g - Search current directory for occurences of given term and
+"   <leader>o - Browse list of files in current directory
+"   <leader>gg - Search current directory for occurences of given term and
 "   close window if no results
-"   <leader>j - Search current directory for occurences of word under cursor
+"   <leader>g - Search current directory for occurences of word under cursor
 
-nmap ; :Denite buffer -split=floating -winrow=0<CR>
-nmap <leader>t :Denite file/rec -split=floating -winrow=1<CR>
-nnoremap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
-nnoremap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
+" nmap ; :Denite buffer -split=floating -winrow=0<CR>
+" nmap <leader>o :Denite file/rec -split=floating -winrow=1<CR>
+nnoremap <leader>gg :<C-u>Denite grep:. -no-empty -mode=normal<CR>
+nnoremap <leader>g :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
 
-"***********************************************************************************************
+"******************************************************************************
 
 
-
-"*************************************Deoplete Keymapings*********************************************
+"*************************************Deoplete Keymapings***********************
 " Atocomplete using tab
     inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
     inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<tab>"
 
-"********************************************************************************************************
+"******************************************************************************
 
 
 
-
-"*************************************FZF Keymapings*********************************************
-
+"*************************************FZF Keymapings****************************
 " Mapping selecting mappings
-"nmap <leader><tab> <plug>(fzf-maps-n)
-"xmap <leader><tab> <plug>(fzf-maps-x)
-"omap <leader><tab> <plug>(fzf-maps-o)
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
-"imap <c-x><c-k> <plug>(fzf-complete-word)
-"imap <c-x><c-f> <plug>(fzf-complete-path)
-"imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-"imap <c-x><c-l> <plug>(fzf-complete-line)
-
-"******************************************************************************************************
-
-
-
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+imap <leader>o :Files<cr>
+nnoremap ; :Buffers<cr>
+"******************************************************************************
 
 
-" *****************************neosnipets bindings*****************************************
+
+
+" *****************************neosnipets bindings******************************
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -194,7 +191,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 
-"*********************************************************************************
+"*******************************************************************************
 
 
 
@@ -258,13 +255,3 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
     nnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
     vnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
 "************************************************************************************
-
-
-
-
-
-
-
-
-
-

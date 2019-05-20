@@ -37,7 +37,7 @@ Plug 'vim-airline/vim-airline-themes'           " Airline themes
     Plug 'tpope/vim-fugitive'                       " Git commands from vim
     Plug 'mhinz/vim-signify'                        " shows diff with git
         "Rejected based on reviews and speed for better alternative
-            Plug 'airblade/vim-gitgutter'                   " Shows diff with git
+            " Plug 'airblade/vim-gitgutter'                   " Shows diff with git
 
 
 Plug 'Yggdroot/indentLine'                      " Indentation indicator
