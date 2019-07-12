@@ -1,4 +1,8 @@
-# for markdown preview
+# Fuzzy file finder
+fzf
+
+
+# For markdown preview
 nodejs
 npm
 curl
