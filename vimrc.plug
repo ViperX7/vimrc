@@ -94,7 +94,7 @@ let g:deoplete#enable_at_startup = 1
         Plug 'fszymanski/deoplete-emoji'
 
 
-
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}    " for markdown preview
 
 
 

@@ -37,6 +37,8 @@
     source ~/.vim/ext/deoplete.vim
 " Neosnippet
     source ~/.vim/ext/neosnippet.vim
+" vim-instant-markdown
+    source ~/.vim/ext/vim-instant-markdown.vim
 
 " ***************************************************************************
 
