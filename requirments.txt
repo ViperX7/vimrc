@@ -1,0 +1,5 @@
+# for markdown preview
+nodejs
+npm
+curl
+npm ( instant-markdown-d )
