@@ -64,6 +64,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'w0rp/ale'                                 " Async code linter and fixer
 Plug 'blueyed/vim-qf_resize'                    " Auto resizes ale window
 
+" Code autocompletion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 

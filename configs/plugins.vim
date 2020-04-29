@@ -33,8 +33,10 @@
     source ~/.vim/ext/denite.vim
 " Airline
     source ~/.vim/ext/airline.vim
+" coc.nvim
+     source ~/.vim/ext/coc.vim
 " Deoplete
-    source ~/.vim/ext/deoplete.vim
+"     source ~/.vim/ext/deoplete.vim
 " Neosnippet
     source ~/.vim/ext/neosnippet.vim
 " vim-instant-markdown
