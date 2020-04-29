@@ -236,8 +236,8 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 "*****************Ranger Keybindings*****************************************
     " Dissable Default bindings
         let g:ranger_map_keys = 0
-        map <leader>ft :RangerNewTab<CR>
-        map <leader>f :Ranger<CR>
+        map <space>ft :RangerNewTab<CR>
+        map <space>f :Ranger<CR>
 
     "let g:NERDTreeHijackNetrw = 0   " add this line if you use NERDTree
     "let g:ranger_replace_netrw = 1  " open ranger when vim open a directory
@@ -385,29 +385,9 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
     nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "************************************************************************************
 "*****************************Coc plugins**********************************
-let g:coc_explorer_global_presets = {
-\   '.vim': {
-\      'root-uri': '~/.vim',
-\   },
-\   'floating': {
-\      'position': 'floating',
-\   },
-\   'floatingLeftside': {
-\      'position': 'floating',
-\      'floating-position': 'left-center',
-\      'floating-width': 50,
-\   },
-\   'floatingRightside': {
-\      'position': 'floating',
-\      'floating-position': 'left-center',
-\      'floating-width': 50,
-\   },
-\   'simplify': {
-\     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
-\   }
-\ }
+
 
 " Explorer
 nmap <C-o> :CocCommand explorer<CR>
-nmap <space>f :CocCommand explorer --preset floating<CR>
+" nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif

@@ -3,8 +3,9 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 "---------File Mannagement----------
-
-Plug 'francoiscabrol/ranger.vim'                " Ranger Integration
+" Ranger Integration
+    " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}  " only Nvim
+    Plug 'francoiscabrol/ranger.vim'                " Ranger Integration
 
 Plug 'tpope/vim-eunuch'                         " File operation commands
 
@@ -118,7 +119,8 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
     " Plug 'jaxbot/semantic-highlight.vim'            " Better Highlighting
 
 
-"-------------------------------------Experimental---------------------------
+
+    "-------------------------------------Experimental---------------------------
 
 
 

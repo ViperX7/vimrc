@@ -1,10 +1,21 @@
 {
     "clangd.semanticHighlighting": true,
 
+
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python"],
+
+    "explorer.width": 30,
+    "explorer.icon.enableNerdfont": true,
+
+  // python config
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+
+  // Highlighter
+  "coc.preferences.colorSupport": true,
+
 // explorer
 
-  "explorer.width": 30,
-  "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings": {
     "<cr>": ["expandable?", "expand", "open"],

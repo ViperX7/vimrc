@@ -20,6 +20,7 @@ set lazyredraw          " redraw only when we need to.
     syntax on
     colorscheme space-vim-dark
     set background=dark         " tell vim what the background color looks like
+    set termguicolors
 
 " Line Numbering
     :set number relativenumber

@@ -35,6 +35,7 @@
     source ~/.vim/ext/airline.vim
 " coc.nvim
      source ~/.vim/ext/coc.vim
+     source ~/.vim/ext/coc-plugins.vim
 " Deoplete
 "     source ~/.vim/ext/deoplete.vim
 " Neosnippet
