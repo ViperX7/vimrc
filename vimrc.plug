@@ -47,7 +47,7 @@ Plug 'terryma/vim-multiple-cursors'             " Multiple Cursors
 Plug 'jiangmiao/auto-pairs'                     " Automatic pairing for containers
 Plug 'tpope/vim-surround'                       " A surround helper
 
-Plug 'jaxbot/semantic-highlight.vim'            " Better Highlighting
+" Plug 'jaxbot/semantic-highlight.vim'            " Better Highlighting
 
 " Comments
 Plug 'tomtom/tcomment_vim'                      " Commenting plugin

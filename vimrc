@@ -117,7 +117,11 @@ set lazyredraw          " redraw only when we need to.
 
 
 " **************************************************************************
+" ******************************Tmux****************************************
+autocmd VimEnter * silent !tmux set status off
+autocmd VimLeave * silent !tmux set status on
 
+"**************************************************************************
 
 " Imports 
     " Plugins
