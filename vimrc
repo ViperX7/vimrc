@@ -19,6 +19,7 @@ set lazyredraw          " redraw only when we need to.
 " Syntax Highlighting
     syntax on
     colorscheme space-vim-dark
+    set background=dark         " tell vim what the background color looks like
 
 " Line Numbering
     :set number relativenumber
@@ -114,6 +115,11 @@ set lazyredraw          " redraw only when we need to.
 " Autocomplete with dictionary words when spell check is on
     set complete+=kspell
 
+    set iskeyword+=-          " treat dash separated words as a word text object"
+    set conceallevel=0        " So that I can see `` in markdown files
+    set clipboard=unnamedplus " Copy paste between vim and everything else
+
+    au! BufWritePost $MYVIMRC source %  " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " **************************************************************************
 " ******************************Tmux****************************************

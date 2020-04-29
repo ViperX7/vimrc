@@ -14,12 +14,12 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'Shougo/denite.nvim'                       " Another Fuzzy finder
 
-
-Plug 'scrooloose/nerdtree'                      " File manager within vim
-Plug 'Xuyuanp/nerdtree-git-plugin'              " Git integretion for nerd tree
-Plug 'ryanoasis/vim-devicons'                   " Icons and highlighting for NERDTree
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Highlighting for NERDTree
-
+"
+" Plug 'scrooloose/nerdtree'                      " File manager within vim
+" Plug 'Xuyuanp/nerdtree-git-plugin'              " Git integretion for nerd tree
+" Plug 'ryanoasis/vim-devicons'                   " Icons and highlighting for NERDTree
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Highlighting for NERDTree
+"
 
 	"Rejected
             "Plug 'Shougo/vimfiler.vim'         " File mannager
@@ -76,11 +76,14 @@ Plug 'suan/vim-instant-markdown', {'for': 'markdown'}    " for markdown preview
 "*******************************Themes**********************
 Plug 'morhetz/gruvbox'
 
-
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 "*********************************Rejected************************************
 "
 "******Autocompletion
+    " Plug 'davidhalter/jedi-vim'
+    
+    
     " if has('nvim')                                  " Autocomplete
     "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     " else
@@ -140,7 +143,6 @@ Plug 'morhetz/gruvbox'
 
 
 " Python autocompletion, go to definition.
-Plug 'davidhalter/jedi-vim'
 " Better autocompletion
 "  Plug 'Shougo/neocomplcache.vim'
 

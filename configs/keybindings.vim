@@ -55,6 +55,12 @@
     map <C-k> <C-w>k
     map <C-l> <C-w>l
 
+" Use alt + hjkl to resize windows
+    nnoremap <M-j>    :resize -2<CR>
+    nnoremap <M-k>    :resize +2<CR>
+    nnoremap <M-h>    :vertical resize -2<CR>
+    nnoremap <M-l>    :vertical resize +2<CR>
+
 
 " Visual mode Text Selection
     " Vmap for maintain Visual Mode after shifting > and <
@@ -209,21 +215,21 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 
 
 
-"**************************NERDTree KeyBindings*****************************
-
-    " Map a specific key or shortcut to open NERDTree?
-        map <C-o> :NERDTreeToggle<CR>
-
-    " Hit the right arrow to open a node:
-
-        let NERDTreeMapActivateNode='l'
-        " let NERDTreeMapActivateNode='<space>'
-        " let NERDTreeMapActivateNode='<right>'
-
-    " Locate the focused file in the tree with <Leader> + j:
-        nmap <leader>j :NERDTreeFind<CR>
-
-"***********************************************************************
+" "**************************NERDTree KeyBindings*****************************
+"
+"     " Map a specific key or shortcut to open NERDTree?
+"         map <C-o> :NERDTreeToggle<CR>
+"
+"     " Hit the right arrow to open a node:
+"
+"         let NERDTreeMapActivateNode='l'
+"         " let NERDTreeMapActivateNode='<space>'
+"         " let NERDTreeMapActivateNode='<right>'
+"
+"     " Locate the focused file in the tree with <Leader> + j:
+"         nmap <leader>j :NERDTreeFind<CR>
+"
+" "***********************************************************************
 
 
 
@@ -378,4 +384,30 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
     " Resume latest coc list.
     nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "************************************************************************************
+"*****************************Coc plugins**********************************
+let g:coc_explorer_global_presets = {
+\   '.vim': {
+\      'root-uri': '~/.vim',
+\   },
+\   'floating': {
+\      'position': 'floating',
+\   },
+\   'floatingLeftside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'floatingRightside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'simplify': {
+\     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   }
+\ }
 
+" Explorer
+nmap <C-o> :CocCommand explorer<CR>
+nmap <space>f :CocCommand explorer --preset floating<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
