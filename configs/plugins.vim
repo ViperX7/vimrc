@@ -8,8 +8,8 @@
 
 " FZF
     source ~/.vim/ext/fzf.vim
-" NERDTree
-    source ~/.vim/ext/NERDTree.vim
+" " NERDTree
+"     source ~/.vim/ext/NERDTree.vim
 " NERDCommenter
     " source ~/.vim/ext/NERDCommenter.vim
 "NERDTreeGit
@@ -25,8 +25,8 @@
     source ~/.vim/ext/indentLine.vim
 " vim-commentry
     source ~/.vim/ext/vim-commentry.vim
-" Semantic-highlight
-    source ~/.vim/ext/semantic-highlight.vim
+" " Semantic-highlight
+"     source ~/.vim/ext/semantic-highlight.vim
 " Neocompletion Cache
     " source ~/.vim/ext/neocomplcache.vim
 " Denite
