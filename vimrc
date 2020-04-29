@@ -21,8 +21,7 @@ set lazyredraw          " redraw only when we need to.
     colorscheme space-vim-dark
 
 " Line Numbering
-    set number
-
+    :set number relativenumber
 
 " Highlight current line
     set cursorline
