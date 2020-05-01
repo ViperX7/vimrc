@@ -13,7 +13,6 @@ Plug 'tpope/vim-eunuch'                         " File operation commands
 Plug 'junegunn/fzf'                             " Fuzzy File finder
 Plug 'junegunn/fzf.vim'
 
-Plug 'Shougo/denite.nvim'                       " Another Fuzzy finder
 
 "
 " Plug 'scrooloose/nerdtree'                      " File manager within vim
@@ -25,8 +24,8 @@ Plug 'Shougo/denite.nvim'                       " Another Fuzzy finder
 	"Rejected
             "Plug 'Shougo/vimfiler.vim'         " File mannager
             "Plug 'Shougo/unite.vim'
-
-
+" Tmux Navigation
+Plug 'christoomey/vim-tmux-navigator'
 
 
 "------------Editor Enhansement------------

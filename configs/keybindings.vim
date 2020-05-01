@@ -39,10 +39,16 @@
 
     " Opens an edit command with the path of the currently edited file filled in
         noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+  
+    " Open vsplit edit command with the path of the currently edited file filled 
+        noremap <Leader>ev :vsplit <C-R>=expand("%:p:h") . "/" <CR>
+
 
     " Opens a tab edit command with the path of the currently edited file filled
-        noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+        noremap <Leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+"Enable dissable indent lines
+    noremap <leader>i :IndentLinesToggle<cr>
 
 "" Split
     noremap <Leader>h :<C-u>split<CR>
@@ -55,11 +61,11 @@
     map <C-k> <C-w>k
     map <C-l> <C-w>l
 
-" Use alt + hjkl to resize windows
-    nnoremap <M-j>    :resize -2<CR>
-    nnoremap <M-k>    :resize +2<CR>
-    nnoremap <M-h>    :vertical resize -2<CR>
-    nnoremap <M-l>    :vertical resize +2<CR>
+" " Use alt + hjkl to resize windows
+"     nnoremap <M-j>    :resize -2<CR>
+"     nnoremap <M-k>    :resize +2<CR>
+"     nnoremap <M-h>    :vertical resize -2<CR>
+"     nnoremap <M-l>    :vertical resize +2<CR>
 
 
 " Visual mode Text Selection
@@ -138,31 +144,6 @@
 
 
 
-"*************************************Denite Keymapings*************************
-" === Denite shorcuts === "
-"   ;         - Browser currently open buffers
-"   <leader>o - Browse list of files in current directory
-"   <leader>gg - Search current directory for occurences of given term and
-"   close window if no results
-"   <leader>g - Search current directory for occurences of word under cursor
-
-" nmap ; :Denite buffer -split=floating -winrow=0<CR>
-" nmap <leader>o :Denite file/rec -split=floating -winrow=1<CR>
-nnoremap <leader>gg :<C-u>Denite grep:. -no-empty -mode=normal<CR>
-nnoremap <leader>g :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
-
-"******************************************************************************
-
-
-" "*************************************Deoplete Keymapings***********************
-" " Atocomplete using tab
-"     inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-"     inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<tab>"
-"
-" "******************************************************************************
-
-
-
 "*************************************FZF Keymapings****************************
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
@@ -181,57 +162,6 @@ nnoremap ; :Buffers<cr>
 
 
 
-" *****************************neosnipets bindings******************************
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <expr><TAB>
- \ pumvisible() ? "\<C-n>" :
- \ neosnippet#expandable_or_jumpable() ?
- \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-
-"*******************************************************************************
-
-
-
-
-
-
-"*****************************indentline binding**************************
-
-"Enable dissable indent lines
-    noremap <leader>i :IndentLinesToggle<cr>
-"*******************************************************************
-
-
-
-
-
-
-" "**************************NERDTree KeyBindings*****************************
-"
-"     " Map a specific key or shortcut to open NERDTree?
-"         map <C-o> :NERDTreeToggle<CR>
-"
-"     " Hit the right arrow to open a node:
-"
-"         let NERDTreeMapActivateNode='l'
-"         " let NERDTreeMapActivateNode='<space>'
-"         " let NERDTreeMapActivateNode='<right>'
-"
-"     " Locate the focused file in the tree with <Leader> + j:
-"         nmap <leader>j :NERDTreeFind<CR>
-"
-" "***********************************************************************
-
-
 
 "*****************Ranger Keybindings*****************************************
     " Dissable Default bindings
@@ -246,13 +176,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 
 
 
-"***********************Symentic highlighting Keybindings****************************
-"Key binding for toggling
-    nnoremap <Leader>s :SemanticHighlightToggle<cr>
-
-"**************************************************************************************
-
-
 
 
 
@@ -265,20 +188,20 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 
 
 " *************************************COC keybindings******************
-    "" Use tab for trigger completion with characters ahead and navigate.
-    " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-    " other plugin before putting this into your config.
-    inoremap <silent><expr> <TAB>
-          \ pumvisible() ? "\<C-n>" :
-          \ <SID>check_back_space() ? "\<TAB>" :
-          \ coc#refresh()
-    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-    function! s:check_back_space() abort
-      let col = col('.') - 1
-      return !col || getline('.')[col - 1]  =~# '\s'
-    endfunction
-
+    " "" Use tab for trigger completion with characters ahead and navigate.
+    " " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+    " " other plugin before putting this into your config.
+    " inoremap <silent><expr> <TAB>
+    "       \ pumvisible() ? "\<C-n>" :
+    "       \ <SID>check_back_space() ? "\<TAB>" :
+    "       \ coc#refresh()
+    " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+    "
+    " function! s:check_back_space() abort
+    "   let col = col('.') - 1
+    "   return !col || getline('.')[col - 1]  =~# '\s'
+    " endfunction
+    "
     " Use <c-space> to trigger completion.
     inoremap <silent><expr> <c-space> coc#refresh()
 
@@ -329,22 +252,15 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
     augroup end
 
-    " Applying codeAction to the selected region.
-    " Example: `<leader>aap` for current paragraph
-    xmap <leader>a  <Plug>(coc-codeaction-selected)
-    nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-    " Remap keys for applying codeAction to the current line.
-    nmap <leader>ac  <Plug>(coc-codeaction)
+    " " Applying codeAction to the selected region.
+    " " Example: `<leader>aap` for current paragraph
+    " xmap <leader>a  <Plug>(coc-codeaction-selected)
+    " nmap <leader>a  <Plug>(coc-codeaction-selected)
+    "
+    " " Remap keys for applying codeAction to the current line.
+    " nmap <leader>ac  <Plug>(coc-codeaction)
     " Apply AutoFix to problem on the current line.
     nmap <leader>qf  <Plug>(coc-fix-current)
-
-    " Introduce function text object
-    " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-    xmap if <Plug>(coc-funcobj-i)
-    xmap af <Plug>(coc-funcobj-a)
-    omap if <Plug>(coc-funcobj-i)
-    omap af <Plug>(coc-funcobj-a)
 
     " Use <TAB> for selections ranges.
     " NOTE: Requires 'textDocument/selectionRange' support from the language server.
@@ -364,7 +280,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
     " Add (Neo)Vim's native statusline support.
     " NOTE: Please see `:h coc-status` for integrations with external plugins that
     " provide custom statusline: lightline.vim, vim-airline.
-    set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+    " set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
     " Mappings using CoCList:
     " Show all diagnostics.
@@ -386,8 +302,16 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 "************************************************************************************
 "*****************************Coc plugins**********************************
 
+" coc-template
+    " :CocCommand template.template<cr> 
+    " :CocCommand template.templateTop<cr> 
+    nnoremap <leader>t :CocCommand template.templateTop<cr> 
 
 " Explorer
-nmap <C-o> :CocCommand explorer<CR>
-" nmap <space>f :CocCommand explorer --preset floating<CR>
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+    nmap <C-o> :CocCommand explorer<CR>
+    autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+
+" coc-yank
+    nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+

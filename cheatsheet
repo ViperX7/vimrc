@@ -1,0 +1,209 @@
+
+"-------------------------------Vim Specific Key Mappings-----------------------------------
+let leader=","       " leader is comma
+
+" session management
+    <leader>so :OpenSession<Space>
+    <leader>ss :SaveSession<Space>
+    <leader>sd :DeleteSession<CR>
+    <leader>sc :CloseSession<CR>
+
+
+
+
+" ********** Movement
+
+
+" move vertically by visual line    :       j gj
+" move vertically by visual line    :       k gk
+
+" move to beginning/end of line     :       B ^
+" move to beginning/end of line     :       E $
+
+
+" New Tab                           :       <silent> <S-t> :tabnew<CR>
+" Next Tab                          :       <Tab> gt
+" Prev Tab                          :       <S-Tab> gT
+
+
+" Command key optimisation          :       ; :
+
+
+" Set working directory             :       <leader>. :lcd %:p:h<CR>
+
+" Open file in cwd                  :       <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" Open file in cwd (newtab)         :       <Leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+" Open file in cwd (vsplit)         :       <Leader>ev :vsplit <C-R>=expand("%:p:h") . "/" <CR>
+
+
+" H split                           :       <Leader>h :<C-u>split<CR>
+" V split                           :       <Leader>v :<C-u>vsplit<CR>
+
+
+" Easy window navigation   (up)     :       <C-k> <C-w>k
+" Easy window navigation   (down)   :       <C-j> <C-w>j
+" Easy window navigation   (right)  :       <C-l> <C-w>l
+" Easy window navigation   (left)   :       <C-h> <C-w>h
+
+" Space open/closes folds           :       <space> za
+
+" Turn off search highlightset      :      <leader><space> :nohlsearch<CR>
+
+
+" Enable dissable indent lines      :       <leader>i :IndentLinesToggle<cr>
+
+/* " Use alt + hjkl to resize windows */
+/*     <M-j>    :resize -2<CR> */
+/*     <M-k>    :resize +2<CR> */
+/*     <M-h>    :vertical resize -2<CR> */
+/*     <M-l>    :vertical resize +2<CR> */
+/*  */
+/*  */
+/* " Visual mode Text Selection */
+/*     " V for maintain Visual Mode after shifting > and < */
+/*          < <gv */
+/*          > >gv */
+/*  */
+/*          <left> <gv */
+/*          <right> >gv */
+/*  */
+/*     " Move visual block */
+/*          Jv :m '>+1<CR>gv=gv */
+/*          K :m '<-2<CR>gv=gv */
+/*  */
+/*          <down> :m '>+1<CR>gv=gv */
+/*          <up> :m '<-2<CR>gv=gv */
+/*  */
+/*  */
+
+" Copy/Paste/Cut
+    if has('unnamedplus')
+      set clipboard=unnamed,unnamedplus
+    endif
+
+     YY "+y<CR>
+     <leader>p "+gP<CR>
+     XX "+x<CR>
+
+    if has('macunix')
+      " pbcopy for OSX copy/paste
+       <C-x> :!pbcopy<CR>
+       <C-c> :w !pbcopy<CR><CR>
+    endif
+
+
+"-------------------------------------------------------------------------------
+
+
+
+"************************************ALE Keybindings****************************
+
+" Map keys to navigate between lines with errors and warnings.
+     <leader>an :ALENextWrap<cr>
+     <leader>ap :ALEPreviousWrap<cr>
+     <silent> <leader>aj :ALENext<cr>
+     <silent> <leader>ak :ALEPrevious<cr>
+
+" Enable dissable ALE quickly
+     <silent> <leader>aa :ALEToggle<cr>
+     <silent> <leader>af :ALEFix<cr>
+     <silent> <leader>al :ALELint<cr>:echo "Lint"<cr>
+
+"*******************************************************************************
+
+
+
+"*************************************FZF Keybindings****************************
+" Mapping selecting pings
+ <leader><tab> <plug>(fzf-maps-n)
+ <leader><tab> <plug>(fzf-maps-x)
+ <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+ fzf-complete-word <c-x><c-k>
+ fzf-complete-path <c-x><c-f>
+ fzf-complete-fie-ag <c-x><c-j>
+ fzf-complete-line <c-x><c-l>
+ fuzzy Files <leader>o :Files<cr>
+ ; :Buffers<cr>
+"******************************************************************************
+
+
+
+"*****************Ranger Keybindings*****************************************
+" New tab file through ranger"         <space>ft :RangerNewTab<CR>
+         <space>f :Ranger<CR>
+
+    "let g:NERDTreeHijackNetrw = 0   " add this line if you use NERDTree
+    "let g:ranger_replace_netrw = 1  " open ranger when vim open a directory
+"*****************************************************************************
+
+
+
+" *************************************Multiple cursors keybindings******************
+" Select n keywords with several keystrokes     :       <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
+ " Select n keywords with several keystrokes    :    <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
+"************************************************************************************
+
+
+
+" *************************************COC keybindings******************
+
+" Use <c-space> to trigger completion.      :       <silent><expr> <c-space> coc#refresh()
+
+
+" Use `[g` and `]g` to navigate diagnostics     :       <silent> [g <Plug>(coc-diagnostic-prev)
+" Use `[g` and `]g` to navigate diagnostics     :    <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.     :    <silent> gd <Plug>(coc-definition)
+" GoTo code navigation.     :    <silent> gy <Plug>(coc-type-definition)
+" GoTo code navigation.     :    <silent> gi <Plug>(coc-implementation)
+" GoTo code navigation.     :    <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.        :       <silent> K :call <SID>show_documentation()<CR>
+
+
+" Highlight the symbol and its references when holding the cursor.      :       autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.      :       <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.     :       <leader>f  <Plug>(coc-format-selected)
+
+" Applying codeAction to the selected region.       :       <leader>a  <Plug>(coc-codeaction-selected)
+
+" R keys for applying codeAction to the current line.       :       <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.     :       <leader>qf  <Plug>(coc-fix-current)
+
+
+" Show all diagnostics.     :       <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions.        :       <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands.        :       <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document.      :       <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols.     :       <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.      :       <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.      :       <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list.       :       <silent> <space>p  :<C-u>CocListResume<CR>
+
+
+
+
+"************************************************************************************
+"*****************************Coc plugins**********************************
+
+" coc-template
+    " :CocCommand template.template<cr> 
+    " :CocCommand template.templateTop<cr> 
+     <leader>t :CocCommand template.templateBottom<cr> 
+
+" Explorer
+     <C-o> :CocCommand explorer<CR>
+"  <space>f :CocCommand explorer --preset floating<CR>
+    autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+
+" coc-yank
+     <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
+
+
+
