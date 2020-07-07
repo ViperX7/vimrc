@@ -18,7 +18,7 @@ set lazyredraw          " redraw only when we need to.
 
 " Syntax Highlighting
     syntax on
-    colorscheme space-vim-dark
+    colorscheme gruvbox " space-vim-dark
     set background=dark         " tell vim what the background color looks like
     set termguicolors
 
