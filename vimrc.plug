@@ -4,8 +4,12 @@ call plug#begin('~/.vim/plugged')
 
 "---------File Mannagement----------
 " Ranger Integration
-    " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}  " only Nvim
+
+if has('nvim')
+    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}  " only Nvim
+else
     Plug 'francoiscabrol/ranger.vim'                " Ranger Integration
+endif
 
 Plug 'tpope/vim-eunuch'                         " File operation commands
 
@@ -46,6 +50,8 @@ Plug 'terryma/vim-multiple-cursors'             " Multiple Cursors
 Plug 'jiangmiao/auto-pairs'                     " Automatic pairing for containers
 Plug 'tpope/vim-surround'                       " A surround helper
 
+Plug 'mhinz/vim-startify'                       " Start Screen
+
 
 " Comments
 Plug 'tomtom/tcomment_vim'                      " Commenting plugin
@@ -81,7 +87,8 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 " Markdown
     Plug 'suan/vim-instant-markdown', {'for': 'markdown'}    " for markdown preview
 
-
+" Snippets
+    Plug 'honza/vim-snippets'
 
 "*********************************Rejected************************************
 "

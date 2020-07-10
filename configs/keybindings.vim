@@ -164,11 +164,24 @@ nnoremap ; :Buffers<cr>
 
 
 "*****************Ranger Keybindings*****************************************
-    " Dissable Default bindings
+    if has('nvim')
+        nnoremap <space>f :RnvimrToggle<CR>
+        tnoremap <silent> <M-o> <C-\><C-n>:RnvimrToggle<CR>
+
+        " Resize floating window by all preset layouts
+        tnoremap <silent> <M-i> <C-\><C-n>:RnvimrResize<CR>
+
+        " Resize floating window by special preset layouts
+        tnoremap <silent> <M-l> <C-\><C-n>:RnvimrResize 1,8,9,11,5<CR>
+
+        " Resize floating window by single preset layout
+        tnoremap <silent> <M-y> <C-\><C-n>:RnvimrResize 6<CR>
+    else
+        " Dissable Default bindings
         let g:ranger_map_keys = 0
         map <space>ft :RangerNewTab<CR>
         map <space>f :Ranger<CR>
-
+    endif
     "let g:NERDTreeHijackNetrw = 0   " add this line if you use NERDTree
     "let g:ranger_replace_netrw = 1  " open ranger when vim open a directory
 "*****************************************************************************
