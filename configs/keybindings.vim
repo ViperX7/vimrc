@@ -346,3 +346,15 @@ nnoremap ; :Buffers<cr>
     nnoremap <leader>fD :FlutterVisualDebug<cr>
 
 
+" EasyMotion
+let g:EasyMotion_do_mapping        = 0
+let g:EasyMotion_do_shade          = 1
+let g:EasyMotion_inc_highlight     = 0
+let g:EasyMotion_landing_highlight = 0
+let g:EasyMotion_off_screen_search = 0
+let g:EasyMotion_smartcase         = 0
+let g:EasyMotion_startofline       = 0
+let g:EasyMotion_use_smartsign_us  = 1
+let g:EasyMotion_use_upper         = 0
+map <silent><space> <plug>(easymotion-s2)
+
