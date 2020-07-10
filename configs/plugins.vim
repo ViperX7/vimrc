@@ -3,7 +3,7 @@
 
 " Call the .vimrc.plug file
  if filereadable(expand("~/.vim/vimrc.plug"))
-     source ~/.vim/vimrc.plug
+    source ~/.vim/vimrc.plug
  endif
 
 " FZF
@@ -22,11 +22,13 @@
 " Airline
     source ~/.vim/ext/airline.vim
 " coc.nvim
-     source ~/.vim/ext/coc.vim
-     source ~/.vim/ext/coc-plugins.vim
+    source ~/.vim/ext/coc.vim
+    source ~/.vim/ext/coc-plugins.vim
+    set cmdheight=1            " Override
 " vim-instant-markdown
     source ~/.vim/ext/vim-instant-markdown.vim
-
+" vim-flutter
+    source ~/.vim/ext/vim-flutter.vim
 
 
 " " NERDTree

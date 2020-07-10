@@ -50,8 +50,6 @@ Plug 'tpope/vim-surround'                       " A surround helper
 " Comments
 Plug 'tomtom/tcomment_vim'                      " Commenting plugin
 
-        "Rejected
-
 
 
 Plug 'easymotion/vim-easymotion'
@@ -69,14 +67,21 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}    " for markdown preview
-
-
-
 "*******************************Themes**********************
 Plug 'morhetz/gruvbox'
 
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+
+
+
+"*******************************Language Specific**********************
+" Flutter
+    Plug 'thosakwe/vim-flutter'
+    Plug 'dart-lang/dart-vim-plugin'
+" Markdown
+    Plug 'suan/vim-instant-markdown', {'for': 'markdown'}    " for markdown preview
+
+
 
 "*********************************Rejected************************************
 "

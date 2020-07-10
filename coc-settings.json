@@ -2,8 +2,7 @@
     "clangd.semanticHighlighting": true,
 
 
-    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python"],
-
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python", "dart"],
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
 

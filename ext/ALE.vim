@@ -4,7 +4,8 @@
   "Explict declearation to use code fixers
       let g:ale_linters = {
         \ 'javascript': ['prettier', 'eslint'],
-        \ 'python': ['flake8', ]
+        \ 'python': ['flake8', ],
+        \ 'dart': ['dartanalyzer', ]
         \ }
 
   "ALE automatically chooses linter according to file type  (enable/dissable this feature )
@@ -43,6 +44,7 @@
         \   '*': ['remove_trailing_lines', 'trim_whitespace'],
         \   'javascript': ['eslint'],
         \   'python': ['autopep8', 'yapf'],
+        \   'dart': ['dartfmt'],
       \}
 
 

@@ -1,6 +1,7 @@
 # Fuzzy file finder
 fzf
 
+flake8
 
 # For markdown preview
 nodejs

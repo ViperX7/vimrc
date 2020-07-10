@@ -241,8 +241,9 @@ nnoremap ; :Buffers<cr>
     nmap <leader>rn <Plug>(coc-rename)
 
     " Formatting selected code.
-    xmap <leader>f  <Plug>(coc-format-selected)
-    nmap <leader>f  <Plug>(coc-format-selected)
+    " xmap <leader>f  <Plug>(coc-format-selected)
+    " nmap <leader>f  <Plug>(coc-format-selected)
+    vmap <leader>f  <Plug>(coc-format-selected)
 
     augroup mygroup
       autocmd!
@@ -320,4 +321,15 @@ nnoremap ; :Buffers<cr>
 
 " coc-yank
     nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
+" vim-flutter
+
+    nnoremap <leader>fa :FlutterRun<cr>
+    nnoremap <leader>ft :FlutterVSplit<cr>
+    nnoremap <leader>ff :DartFmt<cr>
+    nnoremap <leader>fq :FlutterQuit<cr>
+    nnoremap <leader>fr :FlutterHotReload<cr>
+    nnoremap <leader>fR :FlutterHotRestart<cr>
+    nnoremap <leader>fD :FlutterVisualDebug<cr>
+
 
