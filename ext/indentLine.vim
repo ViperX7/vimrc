@@ -1,7 +1,7 @@
 " Indent Lines
 
 " Enable Disable indent lines
-    let g:indentLine_enabled = 1
+    let g:indentLine_enabled = 0
 
 
 "**************Indent Character Customisation******************
