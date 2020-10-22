@@ -56,10 +56,10 @@ Plug 'mhinz/vim-startify'                       " Start Screen
 " Comments
 Plug 'tomtom/tcomment_vim'                      " Commenting plugin
 
-
+" Tagbar
+    Plug 'majutsushi/tagbar'
 
 Plug 'easymotion/vim-easymotion'
-
 
 
 "----------Code Completion and checking------
@@ -89,6 +89,9 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 " Snippets
     Plug 'honza/vim-snippets'
+
+" Python 
+    Plug 'vim-python/python-syntax'              " Better  Syntax Highliting
 
 "*********************************Rejected************************************
 "

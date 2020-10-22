@@ -267,6 +267,9 @@ nnoremap ; :Buffers<cr>
     augroup end
 
     " " Applying codeAction to the selected region.
+    nmap <silent><leader>ca <Plug>(coc-codelens-action)
+    vmap <silent><leader>a  <Plug>(coc-codeaction-selected)
+    nmap <silent><leader>a  <Plug>(coc-codeaction)
     " " Example: `<leader>aap` for current paragraph
     " xmap <leader>a  <Plug>(coc-codeaction-selected)
     " nmap <leader>a  <Plug>(coc-codeaction-selected)
@@ -358,3 +361,5 @@ let g:EasyMotion_use_smartsign_us  = 1
 let g:EasyMotion_use_upper         = 0
 map <silent><space> <plug>(easymotion-s2)
 
+" TagBar
+nmap <F8> :TagbarToggle<CR>

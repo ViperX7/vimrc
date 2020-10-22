@@ -130,3 +130,5 @@ set lazyredraw          " redraw only when we need to.
         source ~/.vim/configs/plugins.vim
     " Key bindings
         source ~/.vim/configs/keybindings.vim
+    " Testing
+        source ~/.vim/test.vim

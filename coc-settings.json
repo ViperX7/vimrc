@@ -1,25 +1,32 @@
 {
     "clangd.semanticHighlighting": true,
-
-
-    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python", "dart"],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "markdown",
+        "javascript",
+        "graphql",
+        "html",
+        "yaml",
+        "json",
+        "python",
+        "dart"
+    ],
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
-
-  // python config
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.jediEnabled": true,
-
-  // Highlighter
-  "coc.preferences.colorSupport": true,
-
-// explorer
-
-  "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
-    "<cr>": ["expandable?", "expand", "open"],
-    "v": "open:vsplit",
-  }
-
+    // python config
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.jediEnabled": false,
+    // Highlighter
+    "coc.preferences.colorSupport": true,
+    // explorer
+    "explorer.previewAction.onHover": false,
+    "explorer.keyMappings": {
+        "<cr>": [
+            "expandable?",
+            "expand",
+            "open"
+        ],
+        "v": "open:vsplit",
+    }
 }
