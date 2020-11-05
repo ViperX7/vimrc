@@ -93,7 +93,13 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 " Python 
     Plug 'vim-python/python-syntax'              " Better  Syntax Highliting
 
-"*********************************Rejected************************************
+
+" ************************* Documentatoin *********************************
+" vim wiki
+    Plug 'vimwiki/vimwiki'                      " A personal wiki for vim
+
+
+""*********************************Rejected************************************
 "
 "******Autocompletion
     " Plug 'davidhalter/jedi-vim'

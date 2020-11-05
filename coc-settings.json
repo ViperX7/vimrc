@@ -1,4 +1,30 @@
 {
+    let g:coc_global_extensions = [
+        'coc-fzf-preview',
+        'coc-highlight'.
+        'coc-tabnine',
+        'coc-yank',
+        'coc-template',
+        'coc-snippets',
+        'coc-jedi',
+        'coc-git',
+        'coc-floaterm',
+        'coc-explorer',
+        'coc-actions',
+        'coc-svg',
+        'coc-xml',
+        'coc-yaml',
+        'coc-html',
+        'coc-css',
+        'coc-markdownlint',
+        'coc-json',
+        'coc-sh',
+        'coc-python',
+        'coc-go',
+        'coc-flutter',
+        'coc-clanged'
+    ]
+
     "clangd.semanticHighlighting": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "css",
