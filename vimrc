@@ -18,7 +18,14 @@ set lazyredraw          " redraw only when we need to.
 
 " Syntax Highlighting
     syntax on
-    colorscheme gruvbox " space-vim-dark
+    " colorscheme gruvbox " space-vim-dark
+    let g:gruvbox_contrast_dark = 'dark'
+    if exists('+termguicolors')
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    endif
+    let g:gruvbox_invert_selection='0'
+
     set background=dark         " tell vim what the background color looks like
     set termguicolors
 
@@ -132,3 +139,5 @@ set lazyredraw          " redraw only when we need to.
         source ~/.vim/configs/keybindings.vim
     " Testing
         source ~/.vim/test.vim
+
+colorscheme gruvbox-material

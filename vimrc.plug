@@ -21,7 +21,6 @@ Plug 'junegunn/fzf.vim'
 "
 " Plug 'scrooloose/nerdtree'                      " File manager within vim
 " Plug 'Xuyuanp/nerdtree-git-plugin'              " Git integretion for nerd tree
-" Plug 'ryanoasis/vim-devicons'                   " Icons and highlighting for NERDTree
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " Highlighting for NERDTree
 "
 
@@ -60,7 +59,7 @@ Plug 'tomtom/tcomment_vim'                      " Commenting plugin
     Plug 'majutsushi/tagbar'
 
 Plug 'easymotion/vim-easymotion'
-
+Plug 'tpope/vim-repeat'
 
 "----------Code Completion and checking------
 
@@ -74,7 +73,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 "*******************************Themes**********************
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 
@@ -99,6 +99,7 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
     Plug 'vimwiki/vimwiki'                      " A personal wiki for vim
 
 
+Plug 'ryanoasis/vim-devicons'                   " Icons and highlighting for NERDTree
 ""*********************************Rejected************************************
 "
 "******Autocompletion
