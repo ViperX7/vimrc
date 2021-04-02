@@ -37,18 +37,19 @@
 " Set working directory
     nnoremap <leader>. :lcd %:p:h<CR>
 
-    " Opens an edit command with the path of the currently edited file filled in
-        noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-  
-    " Open vsplit edit command with the path of the currently edited file filled 
-        noremap <Leader>ev :vsplit <C-R>=expand("%:p:h") . "/" <CR>
+    " SUSPENDED in favour of fzf
 
-
-    " Opens a tab edit command with the path of the currently edited file filled
-        noremap <Leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+    " " Opens an edit command with the path of the currently edited file filled in
+    "     noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+    "
+    " " Open vsplit edit command with the path of the currently edited file filled 
+    "     noremap <Leader>ev :vsplit <C-R>=expand("%:p:h") . "/" <CR>
+    "
+    " " Opens a tab edit command with the path of the currently edited file filled
+    "     noremap <Leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 "Enable dissable indent lines
-    noremap <leader>i :IndentLinesToggle<cr>
+    noremap <leader>zi :IndentLinesToggle<cr>
 
 "" Split
     noremap <Leader>h :<C-u>split<CR>
@@ -61,11 +62,11 @@
     map <C-k> <C-w>k
     map <C-l> <C-w>l
 
-" " Use alt + hjkl to resize windows
-"     nnoremap <M-j>    :resize -2<CR>
-"     nnoremap <M-k>    :resize +2<CR>
-"     nnoremap <M-h>    :vertical resize -2<CR>
-"     nnoremap <M-l>    :vertical resize +2<CR>
+" Use alt + hjkl to resize windows
+    nnoremap <M-j>    :resize -2<CR>
+    nnoremap <M-k>    :resize +2<CR>
+    nnoremap <M-h>    :vertical resize -2<CR>
+    nnoremap <M-l>    :vertical resize +2<CR>
 
 
 " Visual mode Text Selection
@@ -124,21 +125,21 @@
 
 
 
-
-"************************************ALE Keymapings****************************
-
-" Map keys to navigate between lines with errors and warnings.
-    nnoremap <leader>an :ALENextWrap<cr>
-    nnoremap <leader>ap :ALEPreviousWrap<cr>
-    nmap <silent> <leader>aj :ALENext<cr>
-    nmap <silent> <leader>ak :ALEPrevious<cr>
-
-" Enable dissable ALE quickly
-    nmap <silent> <leader>aa :ALEToggle<cr>
-    nmap <silent> <leader>af :ALEFix<cr>
-    nmap <silent> <leader>al :ALELint<cr>:echo "Lint"<cr>
-
-"*******************************************************************************
+" SUSPENDED :- No longer in used
+" "************************************ALE Keymapings****************************
+"
+" " Map keys to navigate between lines with errors and warnings.
+"     nnoremap <leader>an :ALENextWrap<cr>
+"     nnoremap <leader>ap :ALEPreviousWrap<cr>
+"     nmap <silent> <leader>aj :ALENext<cr>
+"     nmap <silent> <leader>ak :ALEPrevious<cr>
+"
+" " Enable dissable ALE quickly
+"     nmap <silent> <leader>aa :ALEToggle<cr>
+"     nmap <silent> <leader>af :ALEFix<cr>
+"     nmap <silent> <leader>al :ALELint<cr>:echo "Lint"<cr>
+"
+" "*******************************************************************************
 
 
 
@@ -256,7 +257,7 @@ nnoremap ; :Buffers<cr>
     " Formatting selected code.
     " xmap <leader>f  <Plug>(coc-format-selected)
     " nmap <leader>f  <Plug>(coc-format-selected)
-    vmap <leader>f  <Plug>(coc-format-selected)
+    " vmap <leader>f  <Plug>(coc-format-selected)
 
     augroup mygroup
       autocmd!
@@ -301,27 +302,21 @@ nnoremap ; :Buffers<cr>
 
     " Mappings using CoCList:
     " Show all diagnostics.
-    nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-    " Manage extensions.
-    nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-    " Show commands.
-    nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-    " Find symbol of current document.
-    nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+    " nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+    " " Manage extensions.
+    " nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+    " " Show commands.
+    " nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+    " " Find symbol of current document.
+    " nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
     " Search workspace symbols.
     nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
     " Do default action for next item.
-    nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-    " Do default action for previous item.
-    nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-    " Resume latest coc list.
-    nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-    
-    " " Use <TAB> for selections ranges.
-    " NOTE: Requires 'textDocument/selectionRange' support from the language server.
-    " coc-tsserver, coc-python are the examples of servers that support it.
-    nmap <silent> <TAB> <Plug>(coc-range-select)
-    xmap <silent> <TAB> <Plug>(coc-range-select)
+    " nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+    " " Do default action for previous item.
+    " nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+    " " Resume latest coc list.
+    " nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "************************************************************************************
 "*****************************Coc plugins**********************************
 
@@ -363,3 +358,9 @@ map <silent><space> <plug>(easymotion-s2)
 
 " TagBar
 nmap <F8> :TagbarToggle<CR>
+
+
+" let g:mapleader = "\<Space>"
+" let g:maplocalleader = ','
+" nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+" nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
