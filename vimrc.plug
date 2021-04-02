@@ -71,13 +71,14 @@ Plug 'blueyed/vim-qf_resize'                    " Auto resizes ale window
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
-
 "*******************************Themes**********************
-Plug 'gruvbox-community/gruvbox'
+" Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
+Plug 'joshdick/onedark.vim'
 
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 
 "*******************************Language Specific**********************
